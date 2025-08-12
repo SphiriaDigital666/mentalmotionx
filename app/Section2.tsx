@@ -31,7 +31,7 @@ export default function Section2() {
         <div className="relative w-full lg:w-1/2 order-2 lg:order-1 z-10">
           <div className="relative w-full">
             <Image
-              src="/section2/app.png"
+              src="/Section2/app.png"
               alt="Mobile App Preview"
               width={400}
               height={600}
