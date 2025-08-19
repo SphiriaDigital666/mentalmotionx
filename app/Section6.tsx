@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import AnimatedSection from './AnimatedSection';
@@ -44,9 +44,26 @@ const cardVariants = {
 };
 
 const Section6 = () => {
+  const [imageIndices, setImageIndices] = useState([0, 0, 0, 0]); // Separate index for each card
   const [emblaRef] = useEmblaCarousel({ loop: true, align: 'start' }, [
     Autoplay({ playOnInit: true, delay: 3000, stopOnInteraction: false })
   ]);
+
+  const nextImage = (cardIndex: number) => {
+    setImageIndices(prev => {
+      const newIndices = [...prev];
+      newIndices[cardIndex] = (newIndices[cardIndex] + 1) % testimonials.length;
+      return newIndices;
+    });
+  };
+
+  const prevImage = (cardIndex: number) => {
+    setImageIndices(prev => {
+      const newIndices = [...prev];
+      newIndices[cardIndex] = (newIndices[cardIndex] - 1 + testimonials.length) % testimonials.length;
+      return newIndices;
+    });
+  };
 
   return (
     <AnimatedSection className="py-20 px-4 sm:px-6 lg:px-8">
@@ -73,10 +90,32 @@ const Section6 = () => {
                   {testimonial.description}
                 </p>
               </div>
-              <div className="w-1/2">
+              <div className="w-1/2 relative">
+                {/* Image Carousel Navigation Buttons */}
+                <button
+                  onClick={() => prevImage(index)}
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
+                  aria-label="Previous image"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+                
+                <button
+                  onClick={() => nextImage(index)}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
+                  aria-label="Next image"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+
+                {/* Image Display */}
                 <Image
-                  src={testimonial.image}
-                  alt={`Transformation of ${testimonial.name}`}
+                  src={testimonials[imageIndices[index]].image}
+                  alt={`Transformation of ${testimonials[imageIndices[index]].name}`}
                   width={400}
                   height={400}
                   className="object-cover w-full h-full"
@@ -99,10 +138,31 @@ const Section6 = () => {
                       custom={index}
                     >
                          <div className="bg-black rounded-2xl flex flex-col overflow-hidden mx-2">
-                            <div className="w-full h-64">
-                                 <Image
-                                    src={testimonial.image}
-                                    alt={`Transformation of ${testimonial.name}`}
+                            <div className="w-full h-64 relative">
+                                {/* Mobile Image Carousel Navigation Buttons */}
+                                <button
+                                  onClick={() => prevImage(index)}
+                                  className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
+                                  aria-label="Previous image"
+                                >
+                                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                  </svg>
+                                </button>
+                                
+                                <button
+                                  onClick={() => nextImage(index)}
+                                  className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
+                                  aria-label="Next image"
+                                >
+                                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                  </svg>
+                                </button>
+
+                                <Image
+                                    src={testimonials[imageIndices[index]].image}
+                                    alt={`Transformation of ${testimonials[imageIndices[index]].name}`}
                                     width={400}
                                     height={400}
                                     className="object-cover w-full h-full"

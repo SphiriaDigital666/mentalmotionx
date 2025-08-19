@@ -7,20 +7,23 @@ export default function Section5() {
   const cards = [
     {
       label: "1 month",
-      price: "$12.00",
-      sub: "$12.00 billed every month",
+      price: "$29.99",
+      off:"(0% off)",
+      sub: "$29.99 billed every month",
       highlight: false,
     },
     {
       label: "3 month",
-      price: "$10.00",
-      sub: "$10.00 billed every 3 month",
+      price: "$25.49",
+      off:"(15% off)",
+      sub: "$25.49 billed every 3 month",
       highlight: true,
     },
     {
       label: "12 month",
-      price: "$08.00",
-      sub: "$08.00 billed every Year",
+      price: "$20.99",
+      off:"(30% off)",
+      sub: "$20.99 billed every Year",
       highlight: false,
     },
   ];
@@ -57,7 +60,7 @@ export default function Section5() {
             className={`relative bg-[#0B2230] rounded-2xl px-10 py-10 w-full max-w-md flex flex-col gap-4 text-left text-white shadow-lg text-lg ${card.highlight ? 'border-2 border-[#5494BC]' : ''}`}
           >
             <span className="text-base text-white/70 mb-1">{card.label}</span>
-            <span className="text-3xl font-bold">{card.price} <span className="text-xl font-normal">/mo</span></span>
+            <span className="text-3xl font-bold">{card.price} <span className="text-xl font-normal">/mo</span><span className="text-base text-[#009CFF] ml-2">{card.off}</span></span>
             <span className="text-base text-[#5494BC]">{card.sub}</span>
             <button className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-[#132B3A] text-white hover:bg-[#5494BC] transition">
               <span className="text-2xl">→</span>

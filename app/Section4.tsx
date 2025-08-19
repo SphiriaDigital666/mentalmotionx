@@ -36,10 +36,10 @@ export default function Section4() {
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-2">
-            Personalized<br />Fitness & Meal<br />Suggestions
+          Workouts That Fit You. Meals That Fuel You.
           </h2>
           <p className="text-white/80 mb-6 max-w-lg">
-            Receive smart fitness analytics and customized workout plans, ensuring your exercises and meals align perfectly with your goals.
+          Training and meal ideas built around your lifestyle, designed to help you look good, feel great, and keep crushing it in and out of the gym.
           </p>
           {/* Progress Bar */}
           <div className="w-full max-w-xs mb-4">
