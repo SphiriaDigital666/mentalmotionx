@@ -6,21 +6,51 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const faqs = [
   {
-    question: "I'm a beginner — is this program suitable for me?",
-    answer: 'Yes! Our program is designed to be scalable for all fitness levels. We provide detailed instructions and modifications for every exercise to ensure you can start safely and progress at your own pace.',
+    question: "I'm a beginner - is this program suitable for me?",
+    answer: "A THRST app subscription gives you complete access to all features, including:",
+    bulletPoints: [
+      "Personalized workout and meal plans designed for your goals.",
+      "Built-in shopping list for easy meal prep.",
+      "Exercise tracking - quickly log and review your progress for each workout.",
+      "Progress monitoring to stay on top of your fitness journey."
+    ]
   },
   {
-    question: 'I\'m just starting out — is this program right for me?',
-    answer: "Absolutely. We specialize in helping beginners build a strong foundation. The program starts with the basics and gradually increases in intensity as you get stronger and more confident.",
+    question: "I'm a beginner, can I start this app?",
+    answer: "The app is designed for users of every fitness level.",
+    bulletPoints: [
+      "Suitable for beginners, intermediates, and advanced athletes alike.",
+      "Accessible to anyone, regardless of experience."
+    ]
   },
   {
-    question: "I'm new to fitness — can I follow this program?",
-    answer: "Of course. This program is perfect for newcomers. We focus on proper form and technique to prevent injury and help you build long-lasting habits for a healthier lifestyle.",
+    question: "How do you personalize my workouts and meals?",
+    answer: "When you first log in to THRST, you'll be asked to provide your personal details along with your fitness preferences, such as workout goals and dietary choices.",
+    bulletPoints: [
+      "For workouts, you can choose from a variety of training splits including: Full Body, High Volume, Strength, Arm & Leg, Chest & Shoulder, Back & Arm, Shoulder & Arm, Chest & Leg, Upper/Lower, Anterior/Posterior, and Push/Pull/Legs or Push/Pull/Legs/Arms/Chest. Training schedules range from 3 to 5 days per week.",
+      "You'll also set your activity level and personal goal—whether you want to lose, maintain, or gain weight.",
+      "On the nutrition side, available dietary preferences include vegan, vegetarian, pescatarian, or standard (no restrictions). To personalize your plan further, you can choose how many meals you'd like per day—anywhere from 3 to 6 meals."
+    ]
   },
   {
-    question: 'Is this program beginner-friendly?',
-    answer: 'Yes, it is extremely beginner-friendly. We have helped thousands of beginners achieve their fitness goals. You will have all the support and guidance you need to succeed.',
+    question: "How can I get advice regarding my plan or progress?",
+    answer: "THRST does not include one-on-one support for workouts or nutrition.",
+    bulletPoints: [
+      "For personalized guidance, we recommend consulting with a qualified personal trainer or nutritionist."
+    ]
   },
+  {
+    question: "Are there previous guides included?",
+    answer: "No, the guides previously released by Mike on AFLETE are not part of the THRST app."
+  },
+  {
+    question: "Can I access the app on my Apple Watch?",
+    answer: "Currently, THRST does not support Apple Watch integration."
+  },
+  {
+    question: "Can I access my meal/workout plans offline?",
+    answer: "Currently, this feature is not supported."
+  }
 ];
 
 const Section8 = () => {
@@ -41,7 +71,6 @@ const Section8 = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { type: 'spring' as const, damping: 14, stiffness: 120 } },
   };
-
 
   return (
     <AnimatedSection className="py-20 px-4 sm:px-6 lg:px-8">
@@ -91,9 +120,19 @@ const Section8 = () => {
                     transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                     className="overflow-hidden"
                   >
-                    <p className="p-6 pt-0 text-gray-300">
-                      {faq.answer}
-                    </p>
+                    <div className="p-6 pt-0 text-gray-300">
+                      <p className="mb-3">{faq.answer}</p>
+                      {faq.bulletPoints && (
+                        <ul className="space-y-2">
+                          {faq.bulletPoints.map((point, pointIndex) => (
+                            <li key={pointIndex} className="flex items-start">
+                              <span className="text-[#4A8DAF] mr-2 mt-1">•</span>
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                   </motion.section>
                 )}
               </AnimatePresence>
@@ -105,4 +144,4 @@ const Section8 = () => {
   );
 };
 
-export default Section8; 
+export default Section8;

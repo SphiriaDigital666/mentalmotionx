@@ -12,25 +12,25 @@ const testimonials = [
     name: 'Jake Lawson',
     country: 'USA',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    image: '/section6/tran1.png',
+    images: ['/section6/a1.png', '/section6/b1.png'],
   },
   {
     name: 'Aiden Cooper',
     country: 'CANDA',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    image: '/section6/tran2.png',
+    images: ['/section6/a2.png', '/section6/b2.png'],
   },
   {
     name: 'Jone Davidson',
     country: 'ENGLAND',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    image: '/section6/tran3.png',
+    images: ['/section6/a3.png', '/section6/b3.png'],
   },
   {
     name: 'Caleb Brooks',
     country: 'AUSTRALIA',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    image: '/section6/tran4.png',
+    images: ['/section6/a4.png', '/section6/b4.png'],
   },
 ];
 
@@ -52,7 +52,7 @@ const Section6 = () => {
   const nextImage = (cardIndex: number) => {
     setImageIndices(prev => {
       const newIndices = [...prev];
-      newIndices[cardIndex] = (newIndices[cardIndex] + 1) % testimonials.length;
+      newIndices[cardIndex] = (newIndices[cardIndex] + 1) % testimonials[cardIndex].images.length;
       return newIndices;
     });
   };
@@ -60,7 +60,7 @@ const Section6 = () => {
   const prevImage = (cardIndex: number) => {
     setImageIndices(prev => {
       const newIndices = [...prev];
-      newIndices[cardIndex] = (newIndices[cardIndex] - 1 + testimonials.length) % testimonials.length;
+      newIndices[cardIndex] = (newIndices[cardIndex] - 1 + testimonials[cardIndex].images.length) % testimonials[cardIndex].images.length;
       return newIndices;
     });
   };
@@ -90,36 +90,43 @@ const Section6 = () => {
                   {testimonial.description}
                 </p>
               </div>
-              <div className="w-1/2 relative">
+              <div className="w-1/2 relative overflow-hidden rounded-r-2xl">
                 {/* Image Carousel Navigation Buttons */}
                 <button
                   onClick={() => prevImage(index)}
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full p-2.5 transition-all duration-300 backdrop-blur-sm"
                   aria-label="Previous image"
                 >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
                 
                 <button
                   onClick={() => nextImage(index)}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full p-2.5 transition-all duration-300 backdrop-blur-sm"
                   aria-label="Next image"
                 >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
 
                 {/* Image Display */}
-                <Image
-                  src={testimonials[imageIndices[index]].image}
-                  alt={`Transformation of ${testimonials[imageIndices[index]].name}`}
-                  width={400}
-                  height={400}
-                  className="object-cover w-full h-full"
-                />
+                <div className="aspect-square w-full h-full">
+                  <Image
+                    src={testimonials[index].images[imageIndices[index]]}
+                    alt={`Transformation of ${testimonials[index].name}`}
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                
+                {/* Image Counter */}
+                <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">
+                  {imageIndices[index] + 1} / {testimonials[index].images.length}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -138,35 +145,40 @@ const Section6 = () => {
                       custom={index}
                     >
                          <div className="bg-black rounded-2xl flex flex-col overflow-hidden mx-2">
-                            <div className="w-full h-64 relative">
+                            <div className="w-full h-80 relative overflow-hidden rounded-t-2xl">
                                 {/* Mobile Image Carousel Navigation Buttons */}
                                 <button
                                   onClick={() => prevImage(index)}
-                                  className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
+                                  className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full p-2.5 transition-all duration-300 backdrop-blur-sm"
                                   aria-label="Previous image"
                                 >
-                                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                                   </svg>
                                 </button>
                                 
                                 <button
                                   onClick={() => nextImage(index)}
-                                  className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
+                                  className="absolute right-3 top-1/2 transform -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full p-2.5 transition-all duration-300 backdrop-blur-sm"
                                   aria-label="Next image"
                                 >
-                                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                                   </svg>
                                 </button>
 
                                 <Image
-                                    src={testimonials[imageIndices[index]].image}
-                                    alt={`Transformation of ${testimonials[imageIndices[index]].name}`}
-                                    width={400}
-                                    height={400}
-                                    className="object-cover w-full h-full"
+                                    src={testimonials[index].images[imageIndices[index]]}
+                                    alt={`Transformation of ${testimonials[index].name}`}
+                                    fill
+                                    className="object-cover transition-transform duration-500 hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                 />
+                                
+                                {/* Image Counter */}
+                                <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">
+                                  {imageIndices[index] + 1} / {testimonials[index].images.length}
+                                </div>
                             </div>
                             <div className="p-6 w-full flex flex-col justify-center">
                                 <h3 className="text-2xl font-bold">{testimonial.name}</h3>
