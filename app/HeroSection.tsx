@@ -3,8 +3,22 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden text-white p-0">
+      {/* Hero Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/Hero/hero2.png"
+          alt="Hero Background"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
+
       {/* Large Logo Background */}
-      <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+      {/* <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
         <Image
           src="/Hero/Union.png"
           alt="Background Logo"
@@ -13,7 +27,7 @@ export default function HeroSection() {
           className="opacity-10 w-[60vw] max-w-3xl h-auto"
           aria-hidden
         />
-      </div>
+      </div> */}
 
       {/* Navigation - centered logo */}
       <nav className="absolute top-0 w-full z-10">
@@ -34,8 +48,8 @@ export default function HeroSection() {
         </div>
       </nav>
 
-      {/* Hero Content - Bottom */}
-      <div className="absolute bottom-0 w-full text-center z-10 px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-16">
+      {/* Hero Content - Center */}
+      <div className="relative w-full text-center z-10 px-4 sm:px-6 lg:px-8">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight drop-shadow-lg mb-2 sm:mb-3">
           The App That'll Get Your Head
         </h1>
