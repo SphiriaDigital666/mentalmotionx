@@ -18,7 +18,7 @@ export default function Section4() {
         >
           <div className="relative w-full max-w-md h-[420px] sm:h-[500px] rounded-3xl flex items-center justify-center overflow-hidden">
             <Image
-              src="/Section4/image.png"
+              src="/Section4/Image.png"
               alt="Phone App Preview"
               width={500}
               height={600}
