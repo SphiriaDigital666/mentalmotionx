@@ -89,7 +89,7 @@ export default function Section3() {
                 className={
                   activeFilter === label
                     ? "px-6 py-2 rounded-full border border-blue-400 text-blue-200 bg-white/5 hover:bg-blue-400/20 transition"
-                    : "px-6 py-2 rounded-full bg-black text-white font-semibold shadow hover:bg-gray-800 transition-colors"
+                    : "px-6 py-2 rounded-full bg-black text-white font-semibold shadow hover:bg-gray-700 transition-colors"
                 }
               >
                 {label}
