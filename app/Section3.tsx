@@ -89,7 +89,7 @@ export default function Section3() {
                 className={
                   activeFilter === label
                     ? "px-6 py-2 rounded-full border border-blue-400 text-blue-200 bg-white/5 hover:bg-blue-400/20 transition"
-                    : "px-6 py-2 rounded-full bg-black text-white font-semibold shadow hover:bg-gray-800 transition-colors"
+                    : "px-6 py-2 rounded-full bg-black text-white font-semibold shadow hover:bg-gray-700 transition-colors"
                 }
               >
                 {label}
@@ -129,7 +129,7 @@ export default function Section3() {
           <div className="w-full lg:w-1/2 flex justify-center items-center order-2 lg:order-2">
             <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/Section3/mobile.png"
+                src="/Section3/section31.png"
                 alt="Mobile App Preview"
                 width={500}
                 height={600}
