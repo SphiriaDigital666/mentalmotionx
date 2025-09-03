@@ -129,7 +129,7 @@ export default function Section3() {
           <div className="w-full lg:w-1/2 flex justify-center items-center order-2 lg:order-2">
             <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/Section3/mobile.png"
+                src="/Section3/section31.png"
                 alt="Mobile App Preview"
                 width={500}
                 height={600}

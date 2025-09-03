@@ -4,11 +4,11 @@ import React from 'react';
 const Section9 = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto bg-[#1C3D52] rounded-3xl p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+      <div className="max-w-7xl mx-auto bg-[#1C3D52] rounded-3xl   flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
         {/* Left side: Image */}
         <div className="w-full lg:w-1/2">
           <Image
-            src="/Section8/app.png" // User specified this path
+            src="/Section8/section8.png" // User specified this path
             alt="App Preview"
             width={600}
             height={600}
