@@ -12,26 +12,27 @@ export default function Section5() {
 
   const cards = [
     {
+      label: "Monthly",
+      price: "7 days ",
+      off:"free trail",
+      sub: "$000.00 billed annually",
+      highlight: true,
+    },
+    {
       label: "3 month",
-      price: "$25.49",
+      price: "$25.49/mo",
       off:"(15% off)",
       sub: "$76.47 billed every 3 month",
       highlight: false,
     },
     {
       label: "Annual",
-      price: "$20.99",
+      price: "$20.99/mo",
       off:"(30% off)",
       sub: "$251.92 billed annually",
       highlight: true,
     },
-    // {
-    //   label: "12 month",
-    //   price: "$20.99",
-    //   off:"(30% off)",
-    //   sub: "$20.99 billed every Year",
-    //   highlight: false,
-    // },
+
   ];
 
   const containerVariants = {
@@ -69,7 +70,7 @@ export default function Section5() {
             className={`relative bg-[#0B2230] rounded-2xl px-10 py-10 w-full max-w-md flex flex-col gap-4 text-left text-white shadow-lg text-lg cursor-pointer ${card.highlight ? 'border-2 border-[#5494BC]' : ''}`}
           >
             <span className="text-base text-white/70 mb-1">{card.label}</span>
-            <span className="text-3xl font-bold">{card.price} <span className="text-xl font-normal">/mo</span><span className="text-base text-[#009CFF] ml-2">{card.off}</span></span>
+            <span className="text-3xl font-bold">{card.price} <span className="text-xl font-normal"></span><span className="text-base text-[#009CFF] ml-2">{card.off}</span></span>
             <span className="text-base text-[#5494BC]">{card.sub}</span>
             <button 
               onClick={handleCardClick}

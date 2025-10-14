@@ -28,14 +28,14 @@ export default function Section2() {
     <AnimatedSection className="my-10 px-4 sm:px-6 lg:px-8">
       <div className="relative bg-[#20465A] rounded-3xl  overflow-hidden flex flex-col lg:flex-row items-center justify-between shadow-xl">
         {/* Left: Image (on large screens), below content on small screens */}
-        <div className="relative w-full lg:w-1/2 order-2 lg:order-1 z-10">
-          <div className="relative w-full">
+        <div className="relative w-full lg:w-1/2 order-2 lg:order-1 z-10 flex items-center justify-center">
+          <div className="relative w-full h-full flex items-center justify-center my-8 lg:my-12">
             <Image
-              src="/Section2/section2.png"
+              src="/Hero/Sect.jpeg"
               alt="Mobile App Preview"
-              width={400}
-              height={600}
-              className="w-full h-auto "
+              width={300}
+              height={450}
+              className="w-3/4 h-full object-cover mx-auto rounded-2xl"
               priority
             />
           </div>
