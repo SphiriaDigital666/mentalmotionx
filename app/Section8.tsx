@@ -6,50 +6,42 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const faqs = [
   {
-    question: "I'm a beginner - is this program suitable for me?",
-    answer: "A THRST app subscription gives you complete access to all features, including:",
+    question: "Is there a free trial?",
+    answer: "Yes! Try MMX free for 7 days. If it doesn’t feel right, cancel anytime.",
     bulletPoints: [
-      "Personalized workout and meal plans designed for your goals.",
-      "Built-in shopping list for easy meal prep.",
-      "Exercise tracking - quickly log and review your progress for each workout.",
-      "Progress monitoring to stay on top of your fitness journey."
     ]
   },
   {
-    question: "I'm a beginner, can I start this app?",
-    answer: "The app is designed for users of every fitness level.",
+    question: "I’m a beginner, is this app suitable for me?",
+    answer: "Absolutely. MMX was built for every level from total gym virgins to seasoned lifters. You’ll get step-by-step guidance, demo videos, and structured workouts so you actually know what to do when you walk in. No guessing, just results.",
     bulletPoints: [
-      "Suitable for beginners, intermediates, and advanced athletes alike.",
-      "Accessible to anyone, regardless of experience."
     ]
   },
   {
-    question: "How do you personalize my workouts and meals?",
-    answer: "When you first log in to THRST, you'll be asked to provide your personal details along with your fitness preferences, such as workout goals and dietary choices.",
+    question: "Are new workouts or guides added over time?",
+    answer: "Always. MMX drops fresh programs, challenges, and nutrition guides regularly so you never hit a plateau. We’re constantly levelling up the content, think new training splits, recipes, and mindset modules dropping throughout the year.",
     bulletPoints: [
-      "For workouts, you can choose from a variety of training splits including: Full Body, High Volume, Strength, Arm & Leg, Chest & Shoulder, Back & Arm, Shoulder & Arm, Chest & Leg, Upper/Lower, Anterior/Posterior, and Push/Pull/Legs or Push/Pull/Legs/Arms/Chest. Training schedules range from 3 to 5 days per week.",
-      "You'll also set your activity level and personal goal—whether you want to lose, maintain, or gain weight.",
-      "On the nutrition side, available dietary preferences include vegan, vegetarian, pescatarian, or standard (no restrictions). To personalize your plan further, you can choose how many meals you'd like per day—anywhere from 3 to 6 meals."
     ]
   },
   {
-    question: "How can I get advice regarding my plan or progress?",
-    answer: "THRST does not include one-on-one support for workouts or nutrition.",
+    question: "Can I use the app with my Apple Watch?",
+    answer: "Not yet, but it’s on our radar. We’re building full Apple Watch + wearable integration so you’ll be able to track sessions, heart rate, and calories right from your wrist soon.",
     bulletPoints: [
-      "For personalized guidance, we recommend consulting with a qualified personal trainer or nutritionist."
     ]
   },
   {
-    question: "Are there previous guides included?",
-    answer: "No, the guides previously released by Mike on AFLETE are not part of the THRST app."
+    question: "Can I access my workouts or meals offline?",
+    answer: "Not right now. You’ll need an internet connection to load workouts and meals but once they’re open, you can screenshot or save what you need before training if you’re heading somewhere with dodgy Wi-Fi.",
+    bulletPoints: [
+    ]
   },
   {
-    question: "Can I access the app on my Apple Watch?",
-    answer: "Currently, THRST does not support Apple Watch integration."
+    question: "Do I need a gym membership?",
+    answer: "You can train anywhere, most MMX programs are gym-based, but we’ve got home-friendly options too."
   },
   {
-    question: "Can I access my meal/workout plans offline?",
-    answer: "Currently, this feature is not supported."
+    question: "Can I get premium or one-on-one coaching?",
+    answer: "Yes. Our premium coaching gives you personalised feedback, weekly adjustments, and a coach who actually keeps you on track + more.Spots are limited each month, so if you’re ready to go all-in, hit “Premium Coaching Enquiry."
   }
 ];
 

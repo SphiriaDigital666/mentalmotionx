@@ -11,7 +11,7 @@ export default function Section3() {
   const filters = [
     "Gym Virgins",
     "Project Peach",
-    "Fat Loass Formula",
+    "Fat Loss Formula",
     "Muscle Gain Series",
   ];
 
@@ -32,7 +32,7 @@ export default function Section3() {
       //   accuracy: "99.1%"
       // }
     },
-    "Fat Loass Formula": {
+    "Fat Loss Formula": {
       title: "Fat Loss Formula",
       description: "No fluff, no fads, just a smart proven approach to dropping body fat and holding onto lean muscle. Fat Loss Formula is your go-to group for gym-based and home-friendly programs built to get you lean, strong, and feeling sharp. Whether you're here to shred down, reset your routine, or finally see the definition you've been chasing, this is the blueprint. With a mix of strength training, conditioning, and cardio that actually works, you'll burn fat, boost energy, and train with intent — no starving, no endless treadmills, just real structure and serious results.",
       // stats: {

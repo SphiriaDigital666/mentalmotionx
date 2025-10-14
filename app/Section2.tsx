@@ -60,7 +60,10 @@ export default function Section2() {
             </motion.span>
             that work, guides that make sense, and coaching that keeps you smashing goals.
           </h2>
-          <button className="mt-4 bg-white text-black font-semibold rounded-full px-7 py-2 flex items-center gap-2 shadow hover:bg-gray-200 transition">
+          <button 
+            onClick={() => window.open('https://play.google.com/store/apps/details?id=com.mentalmotionx.app.own&pcampaignid=web_share', '_blank')}
+            className="mt-4 bg-white text-black font-semibold rounded-full px-7 py-2 flex items-center gap-2 shadow hover:bg-gray-200 transition"
+          >
             Download The App
             <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
