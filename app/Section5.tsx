@@ -12,10 +12,10 @@ export default function Section5() {
 
   const cards = [
     {
-      label: "Monthly",
-      price: "7 days ",
-      off:"free trail",
-      sub: "$000.00 billed annually",
+      label: "Mental Motion X Monthly",
+      price: "$29.99/mo",
+      off:"After 7 day trail",
+      sub: "",
       highlight: true,
     },
     {
