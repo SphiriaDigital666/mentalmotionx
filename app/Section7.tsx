@@ -7,7 +7,7 @@ const Section7 = () => {
   return (
     <motion.section 
       className="relative py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center h-[70vh] lg:h-[85vh] flex items-center justify-center"
-      style={{ backgroundImage: "url('/Section7/Rectangle.png')" }}
+      style={{ backgroundImage: "url('/Section7/Section7.png')" }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}

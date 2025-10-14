@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import React from 'react';
 
@@ -22,9 +24,12 @@ const Section9 = () => {
             Get Started Now, For Free!
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            Well, what do you waiting for? Let's download the app to experience fitness 4.0.
+            Well, what are you waiting for? Let's download the app to experience fitness 4.0.
           </p>
-          <button className="bg-black text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center lg:justify-start mx-auto lg:mx-0 gap-3 hover:bg-gray-800 transition-colors">
+          <button 
+            onClick={() => window.open('https://play.google.com/store/apps/details?id=com.mentalmotionx.app.own&pcampaignid=web_share', '_blank')}
+            className="bg-black text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center lg:justify-start mx-auto lg:mx-0 gap-3 hover:bg-gray-800 transition-colors"
+          >
             <span>Download App</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
