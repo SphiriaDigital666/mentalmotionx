@@ -42,18 +42,11 @@ export default function Section4() {
           Training and meal ideas built around your lifestyle, designed to help you look good, feel great, and keep crushing it in and out of the gym.
           </p>
           {/* Progress Bar */}
-          <div className="w-full max-w-xs mb-4">
-            <div className="w-full h-2 bg-white/20 rounded-full overflow-hidden">
-              <div className="h-2 bg-white rounded-full" style={{ width: '72%' }} />
-            </div>
-            <div className="flex items-center justify-between mt-2">
-              <span className="font-bold text-lg">72.1%</span>
-              <span className="flex items-center gap-1 text-white/70 text-sm">
-                <span className="text-xl">🤖</span> LLM SCALE
-              </span>
-            </div>
-          </div>
-          <button className="mt-2 px-7 py-2 rounded-full border border-white text-white font-semibold hover:bg-white/10 transition flex items-center gap-2">
+         
+          <button 
+            onClick={() => window.open('https://mental-motion-x.exercise.com/a/checkout/?coupon=&id=58042&referer=false&rfsn=&type=Fbm%3A%3APackage&utm_campaign=', '_blank')}
+            className="mt-2 px-7 py-2 rounded-full border border-white text-white font-semibold hover:bg-white/10 transition flex items-center gap-2"
+          >
             Join Now <span aria-hidden>→</span>
           </button>
         </motion.div>
