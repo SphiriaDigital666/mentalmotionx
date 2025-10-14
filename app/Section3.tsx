@@ -121,7 +121,10 @@ export default function Section3() {
                 <span className="block text-xs font-normal text-white/60 ml-2">AI ACCURACY</span>
               </div>
             </div> */}
-            <button className="mt-2 px-7 py-2 rounded-full border border-white text-white font-semibold hover:bg-white/10 transition flex items-center gap-2">
+            <button 
+              onClick={() => window.open('https://mental-motion-x.exercise.com/a/checkout/?coupon=&id=58042&referer=false&rfsn=&type=Fbm%3A%3APackage&utm_campaign=', '_blank')}
+              className="mt-2 px-7 py-2 rounded-full border border-white text-white font-semibold hover:bg-white/10 transition flex items-center gap-2"
+            >
               Join Now <span aria-hidden>→</span>
             </button>
           </motion.div>
