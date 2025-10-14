@@ -7,13 +7,16 @@ const Section7 = () => {
   return (
     <motion.section 
       className="relative py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center h-[70vh] lg:h-[85vh] flex items-center justify-center"
-      style={{ backgroundImage: "url('/Section7/Section7.png')" }}
+      style={{ backgroundImage: "url('/Hero/DSC01331.jpg')" }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black opacity-40"></div>
+      {/* Bottom fade to dark */}
+      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
       <div className="relative z-10 w-full max-w-5xl mx-auto text-white px-4">
         {/* Container for the floating text */}
         <div className="relative h-56 sm:h-64 md:h-80 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold">
