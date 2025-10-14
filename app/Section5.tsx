@@ -9,7 +9,7 @@ export default function Section5() {
   const handleCardClick = () => {
     window.open(purchaseUrl, '_blank');
   };
-
+// nf
   const cards = [
     {
       label: "Mental Motion X Monthly",
