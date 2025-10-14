@@ -40,7 +40,7 @@ export default function Section2() {
             />
           </div>
         </div>
-        {/* Right: Content */}
+        {/* Right: Content as */}
         <div className="relative py-16 lg:py-28 w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center order-1 lg:order-2 p-6 lg:p-12 text-white z-10">
           <button className="mb-6 px-5 py-1 border border-white/60 rounded-full text-sm font-medium bg-white/10 hover:bg-white/20 transition">Our Purpose</button>
           <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl font-extrabold leading-tight text-center lg:text-left">
