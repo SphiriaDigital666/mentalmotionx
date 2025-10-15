@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+build-push.sh
+deploy.sh
+dns-setup.sh
+docker-compose.prod.yml
+docker-compose.yml
+Dockerfile
+remote-deploy.sh
+next.config.js
