@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mentalmotionx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mentalmotionx:latest
+    container_name: mentalmotionx
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
