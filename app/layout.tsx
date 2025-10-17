@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   title: "Mental Motion X - Fitness App",
   description: "The App That'll Get Your Head Right and Your Rig Tight. Builds Muscle, Mind, and a Bit of Mayhem.",
   icons: {
-    icon: '/Hero/Favicon.png',
-    shortcut: '/Hero/Favicon.png',
-    apple: '/Hero/Favicon.png',
+    icon: '/Hero/logo.jpg',
+    shortcut: '/Hero/logo.jpg',
+    apple: '/Hero/logo.jpg',
   },
 };
 
@@ -25,6 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ scrollBehavior: 'smooth' }}>
+      <head>
+        <link rel="icon" type="image/jpeg" href="/Hero/logo.jpg" />
+        <link rel="shortcut icon" type="image/jpeg" href="/Hero/logo.jpg" />
+        <link rel="apple-touch-icon" href="/Hero/logo.jpg" />
+      </head>
       <body className={`${roboto.className} bg-black text-white`}>
         <div className="relative overflow-hidden">
            {/* Background Circles */}

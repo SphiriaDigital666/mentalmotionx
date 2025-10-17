@@ -41,16 +41,8 @@ export default function HeroSection() {
         className="absolute top-0 w-full z-10"
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between py-6 px-6">
-          {/* Left: Links */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="hidden sm:flex flex-1 gap-8 text-base font-medium"
-          >
-            <a href="#guides" className="hover:text-blue-300 transition hover:scale-110 inline-block">Guides</a>
-            <a href="#about" className="hover:text-blue-300 transition hover:scale-110 inline-block">About</a>
-          </motion.div>
+          {/* Left: Empty space for balance */}
+          <div className="flex-1"></div>
           {/* Center: Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
